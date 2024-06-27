@@ -459,48 +459,57 @@ ul{
 
 
 /* ||ABOUT PAGE */
+/* History */
+.history{
+    padding: .5rem;
+}
+
 .history__h2{
     text-align: center;
 }
 
-.history{
-    padding: clamp(.2rem, 1vw, 1rem);
-    /* background-color: var(--TERTIARYCOLOR); */
+.history__p1,
+.history__p2,
+.history__p3{
+    padding: 0.5rem 0 .5rem 0;
 }
-.history__p{
-    margin-top: clamp(.3rem, 1vw, 1rem);
-    margin-bottom: clamp(.3rem, 1vw, 1rem);
+
+.history__figure{
+
 }
 
 .history__figure img{
-    border-radius: clamp(.4rem, 1vw, 1rem);
+    border-radius: 5%;
 }
 
 .history__figure figcaption{
-    text-align: center;
+    font-weight: 300;
+    font-size: .8rem;
+    color: var(--ACCENTCOLOR);
 }
 
-
 /* OUR TEAM */
+.team{
+    padding: .5rem;  
+}
+
 .team__h2{
     text-align: center;
-    padding: clamp(.4rem, 1vw, 1rem);
+    padding: 0 0 .5rem 0;
     
 }
 
-.team{
+.team__cards-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
-    padding: clamp(.2rem, 1vw, 1rem);
-    gap: clamp(.4rem, 1vw, .7rem);
     
-
+    gap: clamp(.4rem, 1vw, .7rem);  
 }
 
 .team__card{
-    padding: clamp(.4rem, 1vw, .7rem);
-    border: 2px solid var(--ACCENTCOLOR);
+    padding: .2rem;
+    border: 2px solid var(--NAVCOLOR);
     border-radius: clamp(.4rem, 2vw, 2rem);
     background-color: var(--BGCOLOR);
 }
@@ -519,51 +528,52 @@ ul{
 
 /* Contacts Section */
 .contacts{
-    padding: clamp(.2rem, 1vw, 1rem);
+    padding: .5rem;
 
 }
 
 .contacts__figure{
     
+}
 
+.contacts__figure figcaption{
+    font-weight: 300;
+    font-size: .8rem;
+    color: var(--ACCENTCOLOR);
 }
 
 /* Working Hours */
 .hours{
-    /* text-align: center; */
+    text-align: center;
 }
 
 .hours__h2{
-    /* text-align: center; */
+    text-align: center;
 }
 
-.hours__ul{
-    list-style-position: inside;
-    list-style-type: disc;
+.hours__ul li{
+    color: var(--FONTCOLOR);
+    font-weight: 600;
+    
 }
+
 
 
 /* Addresses Area*/
-.contacts__figure img{
-    border-radius: clamp(.3rem, 1vw, 1rem);
-}
-
-.contacts__figure figcaption{
-    /* text-align: center; */
-}
-
 .address__h2{
-    /* text-align: center; */
+    text-align: center;
 }
 
 
 .address{
-    /* text-align: center; */
+    text-align: center;
 }
+
+
 
 /* Contact Form */
 .form__h2{
-    /* text-align: center; */
+    text-align: center;
 }
 
 .form {
@@ -581,7 +591,8 @@ ul{
 
 .form__name-p, .form__email-p ,.form__comment-p{
     padding: clamp(.5rem, 1vw, 1rem);
-    font-size: clamp(1.3rem, 2vw, 1.7rem);
+    font-size: clamp(1.2rem, 2vw, 1.7rem);
+    font-weight: 600;
 }
 
 
@@ -595,7 +606,6 @@ ul{
 }
 .form__comment-p{
     padding: clamp(.5rem, 1vw, 1rem);
-    
     width: 100%;
 }
 
@@ -603,7 +613,11 @@ ul{
     padding: clamp(.5rem, 1vw, .1rem) clamp(.8rem, 1vw, 1.3rem);
     margin: clamp(.6rem, 1vw, 1rem) 0 clamp(1rem, 1vw, 1.5rem) 0;
     background-color: var(--ACCENTCOLOR);
-    border: 1px solid var(--FONTCOLOR);
+    border: 1px solid var(--NAVCOLOR);
+    color: var(--NAVCOLOR);
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: .3rem;
 } 
 
 
