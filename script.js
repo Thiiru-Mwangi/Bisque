@@ -55,13 +55,17 @@ function updateClientCard(){
 const bodyEl = document.querySelector("body")
 const checkBox = document.querySelector(".toggle__checkbox");
 
-checkBox.checked = true
 updateBody()
 function updateBody(){
     if(checkBox.checked){
         bodyEl.style.background = "var(--DARKMODECOLOR)"
         bodyEl.style.color = "var(--NAVCOLOR)"
     }else{
-        bodyEl.style.background = "white"
+        bodyEl.style.background = "var(--BGCOLOR)"
+        bodyEl.style.color = "var(--FONTCOLOR)"
     }
 }
+
+checkBox.addEventListener("input" ,() => {
+    updateBody()
+})
