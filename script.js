@@ -46,7 +46,7 @@ function updateClientCard(){
     if(idx=== clientData.length){
         idx = 0;
     }
-    setTimeout(()=> {updateClientCard()}, 10000)
+    setTimeout(()=> {updateClientCard()}, 100000000)
 };
 
 
