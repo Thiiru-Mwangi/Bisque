@@ -2,7 +2,7 @@
 const clientData = [{
     imgPath: "./img-assets/4s6.jpg",
     name: "Habakuk Otichillo",
-    text: "Bisque has completely transformed my wardrobe. The attention to detail and personalized service are unmatched. From the initial consultation to the final fitting, the experience was seamless. The suit fits like a glove and exudes quality from every stitch."
+    text: "Bisque has completely transformed my wardrobe. The attention to detail and personalized service are unmatched. From the initial consultation to the final fitting, the experience was seamless. The suit fits like a glove."
 
 },
 {
@@ -46,7 +46,7 @@ function updateClientCard(){
     if(idx=== clientData.length){
         idx = 0;
     }
-    setTimeout(()=> {updateClientCard()}, 7000)
+    setTimeout(()=> {updateClientCard()}, 10000)
 };
 
 
@@ -54,6 +54,8 @@ function updateClientCard(){
 // Dark mode Toggle
 const bodyEl = document.querySelector("body")
 const checkBox = document.querySelector(".toggle__checkbox");
+
+checkBox.checked = JSON.parse(localStorage.getItem("mode"))
 
 updateBody()
 function updateBody(){
@@ -68,4 +70,24 @@ function updateBody(){
 
 checkBox.addEventListener("input" ,() => {
     updateBody()
+    updateLocalStorage()
 })
+
+function updateLocalStorage(){
+    localStorage.setItem("mode", JSON.stringify(checkBox.checked));
+}
+
+
+// Date
+const dateEl = document.getElementById("date")
+const monthEl = document.getElementById("month")
+const yearEl = document.getElementById("year")
+
+const fullDate = new Date()
+
+monthEl.innerText = fullDate.toLocaleString("en", {
+    month: "long"
+})
+dateEl.innerText = fullDate.getDate()
+yearEl.innerText = fullDate.getFullYear()
+
